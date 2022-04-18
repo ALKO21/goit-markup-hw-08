@@ -1,0 +1,84 @@
+.header {
+  outline: 1px solid $colorOutline;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.header-nav__item {
+  position: relative;
+
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.header-nav__link {
+  padding: 32px 0;
+  display: flex;
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+  transition: color 250ms $cubic, fill 250ms $cubic;
+
+  &--current::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: -1.5px;
+    border-radius: 4px;
+    background-color: $colorAccent;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    color: $colorAccent;
+  }
+}
+
+.header-contact {
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+}
+.header-contact__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header-contact__link {
+  display: flex;
+  align-items: center;
+  color: $colorGray;
+  fill: $colorGray;
+
+  padding: 32px 0;
+  display: flex;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+
+  transition: color 250ms $cubic, fill 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    fill: $colorAccent;
+    color: $colorAccent;
+  }
+}
+
+.header-contact__icon {
+  margin-right: 10px;
+  border: 0;
+  list-style: none;
+}
