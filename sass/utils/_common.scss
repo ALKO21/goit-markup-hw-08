@@ -32,8 +32,7 @@ img {
 }
 
 .container {
-  max-width: 1170px;
-  min-width: 320px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -41,32 +40,33 @@ img {
 }
 
 .section {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-.section--no-padding-top {
-  padding-top: 0;
-}
+  padding-bottom: 94px;
+  padding-top: 94px;
 
-.section__title {
-  margin-bottom: 50px;
+  &--no-padding-top {
+    padding-top: 0;
+  }
 
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
+  &__title {
+    margin-bottom: 50px;
 
-.section__title--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  &__title--visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .section--team-background {
