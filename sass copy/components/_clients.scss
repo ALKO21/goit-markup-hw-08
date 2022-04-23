@@ -1,14 +1,9 @@
 .client {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin: -15px;
 }
 .client__item {
-  margin: 15px;
-
-  width: calc((100% - 60px) / 2);
-  // width: 170px;
+  width: 170px;
   height: 92px;
 }
 .client__link {

@@ -1,24 +1,10 @@
 .header {
-  margin-top: -1px;
-  border-bottom: 1px solid $colorOutline;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 0px 16px 15px;
-
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
+  outline: 1px solid $colorOutline;
 }
 
 .header__container {
   display: flex;
   align-items: center;
-}
-
-.header-nav {
-  @media screen and (min-width: 480px) {
-    display: none;
-  }
 }
 
 .header-nav__list {
@@ -64,10 +50,6 @@
   padding: 0;
   display: flex;
   margin-left: auto;
-
-  @media screen and (min-width: 480px) {
-    display: none;
-  }
 }
 .header-contact__item:not(:first-child) {
   margin-left: 50px;

@@ -1,6 +1,6 @@
 .social {
   display: flex;
-  justify-content: center;
+  display: flex;
 }
 
 .team__item .social {
@@ -32,7 +32,7 @@
 }
 
 .team__item .social__link {
-  fill: $colorSocialItems;
+  fill: $colorGray;
 }
 
 .social__link:hover,

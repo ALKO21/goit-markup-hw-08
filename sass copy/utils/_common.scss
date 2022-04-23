@@ -32,28 +32,27 @@ img {
 }
 
 .container {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-  }
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-  }
 }
 
 .section {
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-bottom: 94px;
+  padding-top: 94px;
 
   &--no-padding-top {
     padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
   }
 
   &__title--visually-hidden {
@@ -68,24 +67,8 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-
-  @media screen and (min-width: $desktop) {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
-}
-
-.section__title {
-  margin-bottom: 30px;
-
-  font-size: 26px;
-  line-height: calc(33 / 28);
-  text-align: center;
 }
 
 .section--team-background {
   background-color: $bgColorProjectButtons;
-  width: 480px;
-  margin-left: auto;
-  margin-right: auto;
 }

@@ -1,0 +1,105 @@
+.button-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button-block__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.button-block__object {
+  padding: 6px 22px;
+  cursor: pointer;
+
+  background-color: $bgColorProjectButtons;
+  font-weight: 500;
+  line-height: 1.6;
+  border-radius: 4px;
+  border: none;
+
+  transition: background-color 250ms $cubic, box-shadow 250ms $cubic, color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    color: $colorWhite;
+    background-color: $colorAccent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}
+
+/* our_projects buttons end  */
+
+/* project pictures  start*/
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects__item {
+  margin-bottom: 30px;
+
+  &:nth-child(n + 7) {
+    margin-bottom: 0px;
+  }
+}
+
+.projects-sample {
+  text-decoration: none;
+  color: $colorBlack;
+
+  transition: box-shadow 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .projects-sample__pic-block--overlay,
+  &:focus .projects-sample__pic-block--overlay {
+    transform: translateY(0%);
+  }
+}
+
+.projects-sample__pic-block {
+  position: relative;
+  overflow: hidden;
+
+  &--overlay {
+    position: absolute;
+    padding: 63px 24px;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    background-color: $bgColorProjectOverlay;
+    color: $colorWhite;
+    font-size: 18px;
+    line-height: 1.5555;
+
+    transform: translateY(100%);
+    transition: transform 250ms ease, background-color 250ms $cubic, color 250ms $cubic;
+  }
+}
+
+.projects-sample__title {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.projects-sample__name {
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects-sample__direction {
+  line-height: 1, 88;
+  color: $colorGray;
+}
