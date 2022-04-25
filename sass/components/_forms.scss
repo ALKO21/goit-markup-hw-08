@@ -8,6 +8,8 @@
   background-color: $bgColorBackdrop;
   opacity: 1;
   transition: opacity 250ms $cubic;
+
+  overflow-x: scroll;
 }
 .backdrop--is-hidden {
   opacity: 0;
@@ -22,9 +24,9 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  padding: 40px 39px 40px 41px;
+  padding: 40px 40px 40px 40px;
 
-  width: 528px;
+  width: 450px;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -33,69 +35,74 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms, $cubic;
-}
-.modal__title {
-  margin-bottom: 12px;
 
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.modal__list {
-  margin-bottom: 20px;
-}
-.modal__item:not(:first-child) {
-  margin-top: 10px;
-}
-.modal__label {
-  position: relative;
-  display: block;
-
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
-
-  color: $colorGray;
-}
-.modal__frame {
-  width: 100%;
-
-  padding-left: 42px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-top: 4px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-  resize: none;
-
-  transition: border 250ms $cubic;
-
-  &:focus-within {
-    border: 1px solid $colorAccent;
+  @media screen and (min-width: $desktop) {
+    width: 528px;
   }
-  &:focus-within + .modal__icon {
-    fill: $colorAccent;
+  .modal__title {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: calc(30 / 20);
   }
-}
+  .modal__list {
+    margin-bottom: 20px;
+  }
+  .modal__item:not(:first-child) {
+    margin-top: 10px;
+  }
+  .modal__label {
+    position: relative;
+    display: block;
 
-.modal__icon {
-  position: absolute;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
 
-  top: 50%;
-  left: 0;
+    color: $colorGray;
+  }
+  .modal__frame {
+    width: 100%;
 
-  transform: translateX(12px);
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 4px;
 
-  width: 18px;
-  height: 18px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 
-  transition: fill 250ms $cubic;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    resize: none;
+
+    transition: border 250ms $cubic;
+
+    &:focus-within {
+      border: 1px solid $colorAccent;
+    }
+    &:focus-within + .modal__icon {
+      fill: $colorAccent;
+    }
+  }
+
+  .modal__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateX(12px);
+
+    width: 18px;
+    height: 18px;
+
+    transition: fill 250ms $cubic;
+  }
 }
 .modal__svg {
   width: 12px;
@@ -141,18 +148,23 @@
 .checkbox__text {
   margin-left: 7px;
 
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  font-weight: 400;
   letter-spacing: 0.03em;
+
   color: $colorGray;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 
   &--accent {
     color: $colorAccent;
   }
 }
 
-.subscription {
-}
 .subscription__title {
   text-transform: uppercase;
   font-size: 14px;

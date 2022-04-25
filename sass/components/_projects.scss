@@ -1,11 +1,8 @@
 .button-block {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
+  flex-wrap: wrap;
 
-.button-block__item:not(:first-child) {
-  margin-left: 8px;
+  margin-bottom: 50px;
 }
 
 .button-block__object {
@@ -30,6 +27,16 @@
   }
 }
 
+.button-block__item {
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(4) {
+    margin-right: 8px;
+  }
+  &:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+}
 /* our_projects buttons end  */
 
 /* project pictures  start*/

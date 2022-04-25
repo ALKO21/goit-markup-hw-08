@@ -9,6 +9,10 @@
 
 .header__logo {
   margin-right: 93px;
+
+  &.is-open {
+    display: none;
+  }
 }
 
 .header-logo__accent {

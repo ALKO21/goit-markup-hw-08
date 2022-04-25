@@ -56,3 +56,29 @@
     fill: $colorAccent;
   }
 }
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .menu-button__icon-close {
+    display: none;
+  }
+
+  &.is-open .menu-button__icon-close {
+    display: block;
+  }
+
+  &.is-open .menu-button__icon-menu {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $colorAccent;
+  }
+}
