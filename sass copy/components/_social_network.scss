@@ -24,6 +24,12 @@
   height: 100%;
   border-radius: 50%;
   transition: background-color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $colorAccent;
+    fill: $colorWhite;
+  }
 }
 
 .footer .social__link {
@@ -35,8 +41,6 @@
   fill: $colorGray;
 }
 
-.social__link:hover,
-.social__link:focus {
-  background-color: $colorAccent;
-  fill: $colorWhite;
+.social-list {
+  display: flex;
 }
