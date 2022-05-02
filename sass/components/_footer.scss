@@ -1,5 +1,4 @@
 .footer {
-  width: $mobile;
   margin-left: auto;
   margin-right: auto;
 
@@ -10,6 +9,37 @@
 .footer__container {
   display: block;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    // display: flex;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-tablet {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 89px 60px 76px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.footer-contacts {
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+  }
 }
 
 .footer-contacts__item {
@@ -18,7 +48,14 @@
   &:not(:last-child) {
     margin-bottom: 8px;
   }
+
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 }
+
 .footer-contacts__data {
   color: $colorSubscriptionPlaceholderGrey;
   text-decoration: none;
@@ -40,6 +77,13 @@
   margin: 60px 0;
 
   color: $colorWhite;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 }
 .wellcom-block__title {
   margin-bottom: 20px;

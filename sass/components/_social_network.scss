@@ -40,3 +40,9 @@
   background-color: $colorAccent;
   fill: $colorWhite;
 }
+
+.social-list {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

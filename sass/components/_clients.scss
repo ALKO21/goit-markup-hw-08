@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: -15px;
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 .client__item {
   margin: 15px;

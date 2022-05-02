@@ -16,6 +16,9 @@ p {
 }
 
 body {
+  margin-right: auto;
+  margin-left: auto;
+
   font-family: roboto, sans-serif;
   background-color: $bgColorWhite;
   line-height: 1.2;
@@ -37,6 +40,8 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 
+  outline: 2px red solid;
+
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
@@ -49,6 +54,8 @@ img {
 }
 
 .section {
+  outline: 2px blue solid;
+
   padding-bottom: 60px;
   padding-top: 60px;
 
@@ -78,14 +85,23 @@ img {
 .section__title {
   margin-bottom: 30px;
 
-  font-size: 26px;
+  font-size: 28px;
   line-height: calc(33 / 28);
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 }
 
 .section--team-background {
   background-color: $bgColorProjectButtons;
-  width: 480px;
   margin-left: auto;
   margin-right: auto;
+
+  // @media screen and (min-width: $tablet) {
+  //   width: $tablet;
+  //   // margin: 0 -15px;
+  // }
 }

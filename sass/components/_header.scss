@@ -1,31 +1,45 @@
 .header {
+  outline: 2px green solid;
+
   position: relative;
 
   margin-top: -1px;
   border-bottom: 1px solid $colorOutline;
   margin-left: auto;
   margin-right: auto;
-  padding: 16px 0px 16px 0;
 
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
 .header__container {
+  outline: 2px green solid;
+
   position: relative;
   display: flex;
-  align-items: center;
-  width: 100%;
   justify-content: space-between;
+
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 15px 0 15px;
+  }
 }
 
 .menu-container {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
+  outline: 2px green solid;
 
   align-items: center;
   width: 100%;
@@ -33,18 +47,65 @@
 
   background-color: $colorWhite;
 
-  &.is-open {
-    display: block;
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
   }
 }
 
 .header-nav__list {
-  @media screen and (min-width: $mobile) {
-    // display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  outline: 2px green solid;
+}
+
+.header-nav__item {
+  position: relative;
+
+  outline: 2px green solid;
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(2) .header-nav__link {
+      padding: 32px 0;
+    }
+
+    &:nth-child(3) .header-nav__link {
+      padding-bottom: 302px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    &:first-child {
+      margin-left: 88px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
 .header-nav__link {
+  outline: 2px green solid;
+
+  padding: 32px 0;
+
   display: flex;
   text-decoration: none;
   font-weight: 500;
@@ -59,8 +120,11 @@
 
   &--current::after {
     position: absolute;
+    bottom: 0;
+
     content: '';
     width: 100%;
+    text-align: center;
     height: 4px;
     bottom: -1.5px;
     border-radius: 4px;
@@ -73,29 +137,52 @@
     color: $colorAccent;
   }
 
-  .header-nav__item:nth-child(2) & {
-    padding: 32px 0;
+  @media screen and (min-width: $tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
   }
-  .header-nav__item:nth-child(3) & {
-    padding-bottom: 302px;
-  }
-}
-
-.header-contact__item:last-child {
-  margin-bottom: 64px;
-  margin-top: 32px;
 }
 
 .header-contact {
+  outline: 2px green solid;
+
   padding: 0;
-  // display: flex;
   margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: -webkit-box;
+  }
 }
-// .header-contact__item:not(:first-child) {
-//   margin-left: 50px;
-// }
+
+.header-contact__item {
+  outline: 2px green solid;
+
+  // display: -webkit-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 .header-contact__link {
+  outline: 2px green solid;
+
+  margin-right: 8px;
+
   color: $colorGray;
   fill: $colorGray;
   text-decoration: none;
@@ -114,15 +201,19 @@
     color: $colorAccent;
   }
 
-  .header-contact__item:last-child & {
+  & {
     font-size: 24px;
     line-height: calc(28 / 24);
   }
 
-  @media screen and (min-width: $tablet) {
-    font-weight: 500;
-    line-height: 1.14;
-    padding: 32px 0;
+  & {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.02em;
+    }
   }
 }
 
@@ -130,6 +221,7 @@
   display: none;
 
   @media screen and (min-width: $tablet) {
+    display: block;
     margin-right: 10px;
     border: 0;
     list-style: none;

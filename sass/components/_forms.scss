@@ -166,11 +166,24 @@
 }
 
 .subscription__title {
+  text-align: center;
+
   text-transform: uppercase;
   font-size: 14px;
 
   color: $colorWhite;
 }
+
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
 .subscription__input {
   margin: 20px 0;
 
@@ -179,7 +192,6 @@
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -193,5 +205,12 @@
     letter-spacing: 0.03em;
 
     color: $colorSubscriptionPlaceholderGrey;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
   }
 }
