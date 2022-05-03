@@ -11,13 +11,12 @@
   text-align: center;
 
   @media screen and (min-width: $tablet) {
-    // display: flex;
     text-align: left;
   }
 
   @media screen and (min-width: $desktop) {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
 }
 
@@ -33,6 +32,8 @@
   }
   @media screen and (min-width: $desktop) {
     padding: 0;
+    text-align: justify;
+    align-items: baseline;
   }
 }
 

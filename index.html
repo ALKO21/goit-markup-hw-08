@@ -42,7 +42,7 @@
                 <!-- contacts -->
                 <ul class="header-contact">
                     <li class="header-contact__item">
-                        <a class="header-contact__link" href="mailto:info@devstudio.com">
+                        <a class="header-contact__link header-contact__link--font-size" href="mailto:info@devstudio.com">
                             <svg class="header-contact__icon" width="16px" height="12px">
                                 <use href="./img-vect/sprite.svg#icon-envelope"></use>
                             </svg>
@@ -59,14 +59,14 @@
                     </li>
                 </ul>
                 <ul class="social-list">
-                    <li class="social-list__link">
-                         <a href=" ">Instagram </a> </li>
-                    <li class="social-list__link">
-                         <a href=" "> Twitter</a> </li>
-                    <li class="social-list__link">
-                         <a href=" ">Facebook </a> </li>
-                    <li class="social-list__link">
-                         <a href=" "> LinkedIn</a> </li>
+                    <li >
+                         <a class="social-list__link social-list__link--separation " href=" ">Instagram </a> </li>
+                    <li >
+                         <a class="social-list__link social-list__link--separation " href=" "> Twitter</a> </li>
+                    <li >
+                         <a class="social-list__link social-list__link--separation " href=" ">Facebook </a> </li>
+                    <li >
+                         <a class="social-list__link " href=" "> LinkedIn</a> </li>
                 </ul>
             </div>
 
@@ -78,7 +78,7 @@
         <section class="hero">
             <div class="">
                 <h1 class="hero__title ">Эффективные решения для вашего бизнеса</h1>
-                <button data-modal-open class="button" type="button">Заказать услугу</button>
+                <button data-modal-open class="button button__order" type="button">Заказать услугу</button>
             </div>
         </section>
         <!-- our_features -->
@@ -162,16 +162,11 @@
                 <h2 class="section__title"> Наша команда</h2>
                 <ul class="team">
                     <li class="team__item">
-                        <img class="team__photo" 
-                            srcset="./img-rast/team/team1-450.jpg 1px,
-                                    ./img-rast/team/team1-354.jpg 1px,
-                                    ./img-rast/team/team1-270.jpg 1px,
-                                    ./img-rast/team/team1-450@2x.jpg 2px,
-                                    ./img-rast/team/team1-354@2x.jpg 2px,
-                                    ./img-rast/team/team1-270@2x.jpg 2px"
-                            src="./img-rast/team/team1-270.jpg" 
-                            width="450px"
-                            alt="Игорь Демьяненко" >
+                            <img 
+                            srcset="./img-rast/team/team1-450.jpg 1px,                              
+                                ./img-rast/team/team1-450@2x.jpg 2px"
+                            src="./img-rast/team/team1-450.jpg" 
+                            alt="Игорь Демьяненко" />
                         <div class="team__detail">
                             <h3 class="team__title">Игорь Демьяненко</h3>
                             <p class="team__text">Product Designer</p>
@@ -209,7 +204,15 @@
                         </div>                     
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./img-rast/member2.jpg" alt="Ольга Репина" >
+                        <img class="team__photo" 
+                            srcset="./img-rast/team/team2-450@2x.jpg 450w,
+                                    ./img-rast/team/team2-354.jpg 354w,
+                                    ./img-rast/team/team2-270.jpg 270w"
+                                    
+                            sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                            src="./img-rast/team/team2-270.jpg" 
+                            width="450px"
+                        alt="Ольга Репина" >
                         <div class="team__detail">
                             <h3 class="team__title">Ольга Репина</h3>
                             <p class="team__text">Frontend Developer</p>
@@ -247,7 +250,21 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./img-rast/member3.jpg" alt="Николай Тарасов" >
+                        <picture>
+                            <source srcset="" media="" sizes="" type="" />
+                            <source srcset="" media="" sizes="" type="" />
+                            <img src="" alt="" />
+                        </picture>
+                        <img class="team__photo" 
+                            srcset="./img-rast/team/team3-450.jpg 1px,
+                                    ./img-rast/team/team3-354.jpg 1px,
+                                    ./img-rast/team/team3-270.jpg 1px,
+                                    ./img-rast/team/team3-450@2x.jpg 2px,
+                                    ./img-rast/team/team3-354@2x.jpg 2px,
+                                    ./img-rast/team/team3-270@2x.jpg 2px"
+                            src="./img-rast/team/team3-270.jpg" 
+                            width="450px"
+                        alt="Николай Тарасов" >
                         <div class="team__detail">
                             <h3 class="team__title">Николай Тарасов</h3>
                             <p class="team__text">Marketing</p>
@@ -285,7 +302,16 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./img-rast/member4.jpg" alt="Михаил Ермаков" >
+                        <img class="team__photo" 
+                            srcset="./img-rast/team/team4-450.jpg 1px,
+                                    ./img-rast/team/team4-354.jpg 1px,
+                                    ./img-rast/team/team4-270.jpg 1px,
+                                    ./img-rast/team/team4-450@2x.jpg 2px,
+                                    ./img-rast/team/team4-354@2x.jpg 2px,
+                                    ./img-rast/team/team4-270@2x.jpg 2px"
+                            src="./img-rast/team/team4-270.jpg" 
+                            width="450px"
+                        alt="Михаил Ермаков" >
                         <div class="team__detail">
                             <h3 class="team__title">Михаил Ермаков</h3>
                             <p class="team__text">UI Designer</p>

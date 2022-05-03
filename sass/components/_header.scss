@@ -1,6 +1,4 @@
 .header {
-  outline: 2px green solid;
-
   position: relative;
 
   margin-top: -1px;
@@ -18,8 +16,6 @@
 }
 
 .header__container {
-  outline: 2px green solid;
-
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -39,8 +35,6 @@
 }
 
 .menu-container {
-  outline: 2px green solid;
-
   align-items: center;
   width: 100%;
   height: auto;
@@ -56,6 +50,46 @@
 
     &.is-open {
       display: block;
+
+      padding: 0px 0px 40px 48px;
+
+      & .header-nav__link {
+        color: red;
+        font-size: 40px;
+      }
+
+      & .header-contact {
+        margin-bottom: 64px;
+      }
+
+      & .header-contact__link--font-size {
+        font-size: 34px;
+        color: $colorAccent;
+      }
+
+      & .header-nav__link--current::after {
+        display: none;
+      }
+
+      & .header-contact__item:first-child {
+        margin-bottom: 32px;
+      }
+
+      & .social-list {
+        display: flex;
+      }
+      & .social-list__link {
+        padding-right: 5px;
+        padding-left: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: $colorAccent;
+        &--separation {
+          border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+      }
     }
   }
 
@@ -68,13 +102,10 @@
   @media screen and (min-width: $tablet) {
     display: flex;
   }
-  outline: 2px green solid;
 }
 
 .header-nav__item {
   position: relative;
-
-  outline: 2px green solid;
 
   @media screen and (max-width: 767px) {
     &:nth-child(2) .header-nav__link {
@@ -102,10 +133,6 @@
 }
 
 .header-nav__link {
-  outline: 2px green solid;
-
-  padding: 32px 0;
-
   display: flex;
   text-decoration: none;
   font-weight: 500;
@@ -146,8 +173,6 @@
 }
 
 .header-contact {
-  outline: 2px green solid;
-
   padding: 0;
   margin-left: auto;
 
@@ -162,8 +187,6 @@
 }
 
 .header-contact__item {
-  outline: 2px green solid;
-
   // display: -webkit-box;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,16 +194,16 @@
   &:first-child {
     margin-bottom: 10px;
   }
+
   @media screen and (min-width: $desktop) {
     &:first-child {
       margin-bottom: 0;
+      margin-right: 10px;
     }
   }
 }
 
 .header-contact__link {
-  outline: 2px green solid;
-
   margin-right: 8px;
 
   color: $colorGray;
