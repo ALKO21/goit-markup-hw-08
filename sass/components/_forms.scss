@@ -67,32 +67,6 @@
     color: $colorGray;
   }
 
-  .modal__frame {
-    width: 100%;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-top: 4px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    resize: none;
-
-    transition: border 250ms $cubic;
-
-    &:focus-within {
-      border: 1px solid $colorAccent;
-    }
-    &:focus-within + .modal__icon {
-      fill: $colorAccent;
-    }
-  }
-
   .modal__icon {
     position: absolute;
 
@@ -105,6 +79,33 @@
     height: 18px;
 
     transition: fill 250ms $cubic;
+  }
+}
+
+.modal__frame {
+  width: 100%;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  margin-top: 4px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  resize: none;
+
+  transition: border 250ms $cubic;
+
+  &:focus-within {
+    border: 1px solid $colorAccent;
+  }
+  &:focus-within + .modal__icon {
+    fill: $colorAccent;
   }
 }
 .modal__svg {
