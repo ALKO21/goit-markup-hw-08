@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/sass/main.css">
+    <link rel="stylesheet" href="/css/main.min.css">
 </head>
 <body>
     <!-- header -->
@@ -92,7 +92,15 @@
                     <li class="projects__item">
                         <a class="projects-sample" href="">
                             <div class="projects-sample__pic-block ">
-                                <img src="./img-rast/project1.jpg" alt="Ноутбук" width="370">
+                                <picture> <img src="./img-rast/projects/mobile/img1.jpg" alt="">
+                                    <source srcset="./img-rast/projects/mobile/img1.jpg 1x, ./img-rast/team/team1-450@2x.jpg 2x" media="(max-width: 767px)"
+                                        sizes="" type="image/jpeg" />
+                                    <!-- <source srcset="./img-rast/team/team1-354.jpg 1x, ./img-rast/team/team1-354@2x.jpg 2x" media="(max-width: 1199px)"
+                                        sizes="" type="image/jpeg" />
+                                    <source srcset="./img-rast/team/team1-270.jpg 1x, ./img-rast/team/team1-270@2x.jpg 2x" media="(min-width: 1200px)"
+                                        sizes="" type="image/jpeg" /> -->
+                                    <img src="./img-rast/team/team1-270.jpg" alt="Ноутбук" />
+                                </picture>
                                 <p class="projects-sample__pic-block--overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить
                                 исчерпывающие сведения по компании или частном лице.</p>
@@ -292,7 +300,7 @@
     </footer>
 
     <!-- подключение файла JavaScript -->
-    <script src="./js/menu.js"> </script>
+<script src="./js/mobile-menu.js"> </script>
 
 </body>
 
