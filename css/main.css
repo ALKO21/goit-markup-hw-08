@@ -1344,13 +1344,8 @@ img {
 
 /* our_projects buttons end  */
 /* project pictures  start*/
-.projects {
-  outline: 2px green solid;
-}
-
 @media screen and (min-width: 768px) {
   .projects {
-    outline: 2px green solid;
     margin: -15px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1367,10 +1362,6 @@ img {
   .projects {
     width: auto;
   }
-}
-
-.projects__item {
-  outline: 2px green solid;
 }
 
 @media screen and (max-width: 767px) {
@@ -1393,7 +1384,6 @@ img {
 }
 
 .projects-sample {
-  outline: 2px red solid;
   text-decoration: none;
   color: #212121;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1414,7 +1404,6 @@ img {
 }
 
 .projects-sample__pic-block {
-  outline: 2px red solid;
   position: relative;
   overflow: hidden;
 }
@@ -1438,7 +1427,6 @@ img {
 }
 
 .projects-sample__title {
-  outline: 2px red solid;
   padding-left: 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;

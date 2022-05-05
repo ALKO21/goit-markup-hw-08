@@ -49,10 +49,7 @@
 /* project pictures  start*/
 
 .projects {
-  outline: 2px green solid;
-
   @media screen and (min-width: $tablet) {
-    outline: 2px green solid;
     margin: -15px;
 
     display: flex;
@@ -66,8 +63,6 @@
 }
 
 .projects__item {
-  outline: 2px green solid;
-
   @media screen and (max-width: 767px) {
     &:nth-child(-n + 8) {
       margin-bottom: 30px;
@@ -89,8 +84,6 @@
 }
 
 .projects-sample {
-  outline: 2px red solid;
-
   text-decoration: none;
   color: $colorBlack;
 
@@ -109,8 +102,6 @@
 }
 
 .projects-sample__pic-block {
-  outline: 2px red solid;
-
   position: relative;
   overflow: hidden;
 
@@ -132,8 +123,6 @@
 }
 
 .projects-sample__title {
-  outline: 2px red solid;
-
   padding-left: 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
