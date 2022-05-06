@@ -169,6 +169,12 @@
   }
 }
 
+.subscription {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+}
+
 .subscription__title {
   text-align: center;
 

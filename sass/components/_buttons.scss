@@ -78,6 +78,9 @@
   }
 
   &.is-open .menu-button__icon-close {
+    position: fixed;
+    right: 0;
+
     display: block;
   }
 

@@ -1,20 +1,85 @@
+// .button-block {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: -7.5px;
+//   margin-right: -4px;
+//   margin-left: -4px;
+
+//   @media screen and (max-width: 767px) {
+//     justify-content: left;
+//     margin-bottom: 32.5px;
+//   }
+//   @media screen and (min-width: $tablet) {
+//     margin-bottom: 22.5px;
+//     justify-content: center;
+//   }
+//   @media screen and (min-width: $desktop) {
+//     margin-bottom: 42.5px;
+//   }
+// }
+
 .button-block {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -7.5px;
-  margin-right: -4px;
-  margin-left: -4px;
+  // margin-top: -7.5px;
+  // margin-right: -4px;
+  // margin-left: -4px;
 
   @media screen and (max-width: 767px) {
     justify-content: left;
-    margin-bottom: 32.5px;
+    // margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
-    margin-bottom: 22.5px;
+    // margin-bottom: 22.5px;
     justify-content: center;
   }
   @media screen and (min-width: $desktop) {
-    margin-bottom: 42.5px;
+    // margin-bottom: 42.5px;
+  }
+}
+
+// .button-block__item {
+//   margin: 7.5px 4px;
+// }
+
+.button-block__item {
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    &:nth-child(5) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    &:nth-child(-n + 2) {
+      margin-right: 8px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+    &:nth-child(4) {
+      margin-right: 8px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    &:nth-child(4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:nth-child(4) {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -38,10 +103,6 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
   }
-}
-
-.button-block__item {
-  margin: 7.5px 4px;
 }
 
 /* our_projects buttons end  */
