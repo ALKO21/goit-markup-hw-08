@@ -15,24 +15,26 @@
 </head>
 <body>
     <!-- header -->
-    <header class="header">
-        <div class="header__container container">
+    <header class="header container">
+        <div class="header__container">
             <!-- navigation -->
             <a class="logo header__logo" href="./index.html"> Web<span class="header-logo__accent">Studio</span></a>
-            <button class="menu-button" aria-expanded="true"  type="button" data-menu-button>
+            <button class="burger-menu" aria-expanded="true" type="button" data-menu-button>
                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="menu-button__icon-menu menu-button__icon" href="./img-vect/sprite.svg#menu-burger"></use>
-                    <use class="menu-button__icon-close menu-button__icon" href="./img-vect/sprite.svg#close-burger"></use>
+                    <use class="burger-menu__icon-menu" href="./img-vect/sprite.svg#menu-burger">
+                    </use>
+                    <use class="burger-menu__icon-cross" href="./img-vect/sprite.svg#close-burger">
+                    </use>
                 </svg>
             </button>
             <div class="menu-container" data-menu>
                 <nav class="header-nav">
                     <ul class="header-nav__list">
                         <li class="header-nav__item">
-                            <a class="header-nav__link " href="./index.html">Студия</a>
+                            <a class="header-nav__link header-nav__link--current" href="./index.html">Студия</a>
                         </li>
                         <li class="header-nav__item">
-                            <a class="header-nav__link header-nav__link--current" href="./portfolio.html">Портфолио</a>
+                            <a class="header-nav__link " href="./portfolio.html">Портфолио</a>
                         </li>
                         <li class="header-nav__item">
                             <a class="header-nav__link " href="">Контакты</a>
@@ -42,7 +44,7 @@
                 <!-- contacts -->
                 <ul class="header-contact">
                     <li class="header-contact__item">
-                        <a class="header-contact__link" href="mailto:info@devstudio.com">
+                        <a class="header-contact__link header-contact__link--font-size" href="mailto:info@devstudio.com">
                             <svg class="header-contact__icon" width="16px" height="12px">
                                 <use href="./img-vect/sprite.svg#icon-envelope"></use>
                             </svg>
@@ -59,21 +61,20 @@
                     </li>
                 </ul>
                 <ul class="social-list">
-                    <li class="social-list__link">
-                        <a href=" ">Instagram </a>
+                    <li>
+                        <a class="social-list__link social-list__link--separation " href=" ">Instagram </a>
                     </li>
-                    <li class="social-list__link">
-                        <a href=" "> Twitter</a>
+                    <li>
+                        <a class="social-list__link social-list__link--separation " href=" "> Twitter</a>
                     </li>
-                    <li class="social-list__link">
-                        <a href=" ">Facebook </a>
+                    <li>
+                        <a class="social-list__link social-list__link--separation " href=" ">Facebook </a>
                     </li>
-                    <li class="social-list__link">
-                        <a href=" "> LinkedIn</a>
+                    <li>
+                        <a class="social-list__link " href=" "> LinkedIn</a>
                     </li>
                 </ul>
             </div>
-    
         </div>
     </header>
 <!-- our projects -->

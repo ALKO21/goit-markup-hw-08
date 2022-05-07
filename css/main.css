@@ -478,8 +478,12 @@ img {
   position: relative;
   margin-top: -1px;
   border-bottom: 1px solid #ececec;
-  margin-left: auto;
-  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -497,18 +501,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .header__container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-container {
@@ -516,7 +514,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: auto;
   background-color: #ffffff;
 }
 @media screen and (max-width: 767px) {
@@ -529,6 +526,10 @@ img {
   .menu-container.is-open {
     display: block;
     z-index: 1;
+    padding: 48px 0 48px 40px;
+  }
+  .menu-container.is-open .header-nav__list {
+    overflow: auto;
   }
   .menu-container.is-open .header-nav__link {
     font-size: 40px;
@@ -576,11 +577,6 @@ img {
 
 .header-nav__item {
   position: relative;
-}
-@media screen and (max-width: 767px) {
-  .header-nav__item:nth-child(2) .header-nav__link {
-    padding: 32px 0;
-  }
 }
 @media screen and (min-width: 768px) {
   .header-nav__item:not(:last-child) {
@@ -1747,31 +1743,28 @@ img {
   fill: #2196f3;
 }
 
-.menu-button {
-  z-index: 2;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
+.burger-menu {
   border: none;
   background-color: transparent;
 }
-.menu-button .menu-button__icon-close {
+.burger-menu.is-open {
+  z-index: 2;
+}
+.burger-menu .burger-menu__icon-cross {
   display: none;
 }
-.menu-button.is-open .menu-button__icon-close {
+.burger-menu.is-open .burger-menu__icon-cross {
   display: block;
 }
-.menu-button.is-open .menu-button__icon-menu {
+.burger-menu.is-open .burger-menu__icon-menu {
   display: none;
 }
-.menu-button:hover, .menu-button:focus {
+.burger-menu:hover, .burger-menu:focus {
   cursor: pointer;
   fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .burger-menu {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
