@@ -1675,11 +1675,11 @@ img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    margin-top: 20px;
   }
 }
 
 .subscription__input {
-  margin-top: 20px;
   height: 50px;
   width: 100%;
   padding-top: 15px;
@@ -1724,6 +1724,11 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width: 1199px) {
+  .subscription__input {
+    margin: 20px 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .subscription__input {

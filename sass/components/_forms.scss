@@ -196,12 +196,11 @@
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     align-items: flex-end;
+    margin-top: 20px;
   }
 }
 
 .subscription__input {
-  margin-top: 20px;
-
   height: 50px;
   width: 100%;
   padding-top: 15px;
@@ -220,6 +219,10 @@
     letter-spacing: 0.03em;
 
     color: $colorSubscriptionPlaceholderGrey;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 20px 0;
   }
 
   @media screen and (min-width: $tablet) {
