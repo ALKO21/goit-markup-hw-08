@@ -23,7 +23,6 @@
 .menu-container {
   align-items: center;
   width: 100%;
-
   background-color: $colorWhite;
 
   @media screen and (min-width: $tablet) {
@@ -54,10 +53,6 @@
       align-items: flex-start;
 
       padding: 48px 0 48px 40px;
-
-      @media screen and (max-width: 480px) and (min-width: 767px) {
-        width: 480px;
-      }
 
       & .header-nav__link {
         font-size: 40px;
@@ -172,6 +167,12 @@
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
+  }
+}
+
+.header-contacts {
+  @media screen and (min-width: 767px) {
+    margin: 21px 0;
   }
 }
 
