@@ -1,6 +1,10 @@
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 50;
 
+  background-color: $colorWhite;
+
+  width: 100%;
   margin-top: -1px;
   border-bottom: 1px solid $colorOutline;
 
@@ -8,18 +12,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-  }
 }
 
 .header__container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,46 +26,68 @@
 
   background-color: $colorWhite;
 
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+
   @media screen and (max-width: 767px) {
     display: none;
 
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 0px;
     left: 0;
 
     &.is-open {
-      display: block;
-      z-index: 1;
+      position: absolute;
+      overflow: scroll;
+      height: 100vh;
+
+      display: flex;
+      z-index: 2;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
 
       padding: 48px 0 48px 40px;
+
+      // & .header-nav {
+      //   margin-bottom: 302px;
+      // }
 
       & .header-nav__link {
         font-size: 40px;
       }
 
       & .header-contact {
-        // margin-bottom: 64px;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
       }
 
       & .header-contact__link--font-size {
         font-size: 34px;
         color: $colorAccent;
+        margin-bottom: 32px;
       }
 
       & .header-nav__link--current::after {
         display: none;
       }
 
-      & .header-contact__item:first-child {
-        // margin-bottom: 32px;
-      }
-
       & .social-list {
         display: flex;
+        margin-top: 64px;
       }
+
       & .social-list__link {
         padding-right: 5px;
         padding-left: 5px;
+
         text-decoration: none;
         font-weight: 500;
         font-size: 18px;
@@ -79,12 +96,11 @@
         &--separation {
           border-right: 1px solid rgba(33, 33, 33, 0.2);
         }
+        &--first {
+          padding-left: 0px;
+        }
       }
     }
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
   }
 }
 
@@ -97,24 +113,18 @@
 .header-nav__item {
   position: relative;
 
-  // @media screen and (max-width: 767px) {
-  //   &:nth-child(2) .header-nav__link {
-  //     padding: 32px 0;
-  //   }
-
-  // &:nth-child(3) .header-nav__link {
-  //   padding-bottom: 302px;
-  // }
-  // }
+  @media screen and (max-width: 767px) {
+    &:nth-child(2) {
+      margin: 32px 0;
+    }
+  }
 
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
       margin-right: 50px;
     }
-    &:first-child {
-      margin-left: 88px;
-    }
   }
+
   @media screen and (min-width: $desktop) {
     &:first-child {
       margin-left: 0;
@@ -180,12 +190,19 @@
 }
 
 .header-contact__item {
-  // display: -webkit-box;
   display: -webkit-box;
   display: -ms-flexbox;
 
-  &:first-child {
-    margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -197,8 +214,6 @@
 }
 
 .header-contact__link {
-  margin-right: 8px;
-
   color: $colorGray;
   fill: $colorGray;
   text-decoration: none;

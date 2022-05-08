@@ -1,46 +1,16 @@
-// .button-block {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: -7.5px;
-//   margin-right: -4px;
-//   margin-left: -4px;
-
-//   @media screen and (max-width: 767px) {
-//     justify-content: left;
-//     margin-bottom: 32.5px;
-//   }
-//   @media screen and (min-width: $tablet) {
-//     margin-bottom: 22.5px;
-//     justify-content: center;
-//   }
-//   @media screen and (min-width: $desktop) {
-//     margin-bottom: 42.5px;
-//   }
-// }
-
 .button-block {
   display: flex;
   flex-wrap: wrap;
-  // margin-top: -7.5px;
-  // margin-right: -4px;
-  // margin-left: -4px;
 
   @media screen and (max-width: 767px) {
     justify-content: left;
-    // margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
-    // margin-bottom: 22.5px;
     justify-content: center;
   }
   @media screen and (min-width: $desktop) {
-    // margin-bottom: 42.5px;
   }
 }
-
-// .button-block__item {
-//   margin: 7.5px 4px;
-// }
 
 .button-block__item {
   @media screen and (max-width: 479px) {
@@ -111,11 +81,10 @@
 
 .projects {
   @media screen and (min-width: $tablet) {
-    margin: -15px;
-
+    // margin: -15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -132,21 +101,18 @@
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - (4 * 15px)) / 2);
-    margin: 15px;
+    // margin: 15px;
   }
 
   @media screen and (min-width: $desktop) {
     width: calc((100% - (6 * 15px)) / 3);
-
-    // &:nth-child(-n + 6) {
-    //   margin-bottom: 30px;
-    // }
   }
 }
 
 .projects-sample {
   text-decoration: none;
   color: $colorBlack;
+  // display: flex;
 
   transition: box-shadow 250ms $cubic;
 
@@ -184,25 +150,21 @@
 }
 
 .projects-sample__title {
-  padding-left: 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px 24px;
+
+  outline: 1px solid #eeeeee;
 }
 .projects-sample__name {
-  word-break: break-word;
-
-  padding-top: 20px;
-  margin-bottom: 4px;
-
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
 }
 
 .projects-sample__direction {
-  margin-bottom: 20px;
-
-  line-height: 1, 88;
+  line-height: calc(30 / 16);
   color: $colorGray;
 }

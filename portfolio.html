@@ -15,8 +15,8 @@
 </head>
 <body>
     <!-- header -->
-    <header class="header container">
-        <div class="header__container">
+    <header class="header">
+        <div class="header__container container">
             <!-- navigation -->
             <a class="logo header__logo" href="./index.html"> Web<span class="header-logo__accent">Studio</span></a>
             <button class="burger-menu" aria-expanded="true" type="button" data-menu-button>
@@ -42,38 +42,42 @@
                     </ul>
                 </nav>
                 <!-- contacts -->
-                <ul class="header-contact">
-                    <li class="header-contact__item">
-                        <a class="header-contact__link header-contact__link--font-size" href="mailto:info@devstudio.com">
-                            <svg class="header-contact__icon" width="16px" height="12px">
-                                <use href="./img-vect/sprite.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="header-contact__item">
-                        <a class="header-contact__link " href="tel:+380961111111">
-                            <svg class="header-contact__icon" width="10px" height="16px">
-                                <use href="./img-vect/sprite.svg#icon-smartphone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-                <ul class="social-list">
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" ">Instagram </a>
-                    </li>
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" "> Twitter</a>
-                    </li>
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" ">Facebook </a>
-                    </li>
-                    <li>
-                        <a class="social-list__link " href=" "> LinkedIn</a>
-                    </li>
-                </ul>
+                <div class="header-contacts">
+                    <ul class="header-contact">
+                        <li class="header-contact__item">
+                            <a class="header-contact__link " href="mailto:info@devstudio.com">
+                                <svg class="header-contact__icon" width="16px" height="12px">
+                                    <use href="./img-vect/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="header-contact__item">
+                            <a class="header-contact__link header-contact__link--font-size" href="tel:+380961111111">
+                                <svg class="header-contact__icon" width="10px" height="16px">
+                                    <use href="./img-vect/sprite.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="social-list">
+                        <li>
+                            <a class="social-list__link social-list__link--separation social-list__link--first"
+                                href=" ">Instagram </a>
+                        </li>
+                        <li>
+                            <a class="social-list__link social-list__link--separation " href=" "> Twitter</a>
+                        </li>
+                        <li>
+                            <a class="social-list__link social-list__link--separation " href=" ">Facebook </a>
+                        </li>
+                        <li>
+                            <a class="social-list__link " href=" "> LinkedIn</a>
+                        </li>
+                    </ul>
+    
+                </div>
             </div>
         </div>
     </header>
@@ -93,17 +97,17 @@
                     <li class="projects__item">
                         <a class="projects-sample" href="">
                             <div class="projects-sample__pic-block ">
-                        <picture>
-                            <source srcset="./img-rast/projects/desktop/img-370-1.jpg 1x, ./img-rast/projects/desktop/img-370-1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg" />
-                            <source srcset="./img-rast/projects/tablet/img-354-1.jpg 1x, ./img-rast/projects/tablet/img-354-1@2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg" />
-                            <source srcset="./img-rast/projects/mobile/img-450-1.jpg 1x, ./img-rast/projects/mobile/img-450-1@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg" />
-                            <img src="./img-rast/projects/desktop/img-370-1.jpg" alt="Ноутбук" />
-                        </picture>
+                            <picture>
+                                <source srcset="./img-rast/projects/desktop/img-370-1.jpg 1x, ./img-rast/projects/desktop/img-370-1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg" />
+                                <source srcset="./img-rast/projects/tablet/img-354-1.jpg 1x, ./img-rast/projects/tablet/img-354-1@2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg" />
+                                <source srcset="./img-rast/projects/mobile/img-450-1.jpg 1x, ./img-rast/projects/mobile/img-450-1@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg" />
+                                <img src="./img-rast/projects/desktop/img-370-1.jpg" alt="Ноутбук" />
+                            </picture>
                                 <p class="projects-sample__pic-block--overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить
                                 исчерпывающие сведения по компании или частном лице.</p>
                             </div>
-                            <div class="projects-sample__title">
+                            <div class="projects-sample__title projects-sample__title--grow">
                                 <h2 class="projects-sample__name">Технокряк</h2>
                                 <p class="projects-sample__direction">Веб-сайт</p>
                             </div>

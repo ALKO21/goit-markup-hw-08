@@ -1,19 +1,23 @@
 .client {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -15px;
+  justify-content: center;
+  gap: 30px;
 
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
   }
 }
 .client__item {
-  margin: 15px;
-
-  width: calc((100% - 60px) / 2);
-  // width: 170px;
   height: 92px;
+
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 90px) / 3);
+  }
 }
 .client__link {
   height: 100%;

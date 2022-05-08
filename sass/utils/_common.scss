@@ -18,6 +18,7 @@ p {
 body {
   margin-right: auto;
   margin-left: auto;
+  overflow-x: hidden;
 
   font-family: roboto, sans-serif;
   background-color: $bgColorWhite;
@@ -28,6 +29,9 @@ body {
   margin: 0;
 }
 
+main {
+  padding-top: 70px;
+}
 img {
   display: block;
   max-width: 100%;

@@ -16,8 +16,8 @@
 
 <body>
     <!-- header -->
-    <header class="header container">
-        <div class="header__container">
+    <header class="header">
+        <div class="header__container container">
             <!-- navigation -->
             <a class="logo header__logo" href="./index.html"> Web<span class="header-logo__accent">Studio</span></a>
             <button class="burger-menu" aria-expanded="true" type="button" data-menu-button>
@@ -43,39 +43,41 @@
                     </ul>
                 </nav>
                 <!-- contacts -->
-                <ul class="header-contact">
-                    <li class="header-contact__item">
-                        <a class="header-contact__link header-contact__link--font-size"
-                            href="mailto:info@devstudio.com">
-                            <svg class="header-contact__icon" width="16px" height="12px">
-                                <use href="./img-vect/sprite.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="header-contact__item">
-                        <a class="header-contact__link " href="tel:+380961111111">
-                            <svg class="header-contact__icon" width="10px" height="16px">
-                                <use href="./img-vect/sprite.svg#icon-smartphone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-                <ul class="social-list">
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" ">Instagram </a>
-                    </li>
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" "> Twitter</a>
-                    </li>
-                    <li>
-                        <a class="social-list__link social-list__link--separation " href=" ">Facebook </a>
-                    </li>
-                    <li>
-                        <a class="social-list__link " href=" "> LinkedIn</a>
-                    </li>
-                </ul>
+                <div class="header-contacts">
+                                    <ul class="header-contact">
+                                        <li class="header-contact__item">
+                                            <a class="header-contact__link " href="mailto:info@devstudio.com">
+                                                <svg class="header-contact__icon" width="16px" height="12px">
+                                                    <use href="./img-vect/sprite.svg#icon-envelope"></use>
+                                                </svg>
+                                                info@devstudio.com
+                                            </a>
+                                        </li>
+                                        <li class="header-contact__item">
+                                            <a class="header-contact__link header-contact__link--font-size" href="tel:+380961111111">
+                                                <svg class="header-contact__icon" width="10px" height="16px">
+                                                    <use href="./img-vect/sprite.svg#icon-smartphone"></use>
+                                                </svg>
+                                                +38 096 111 11 11
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="social-list">
+                                        <li>
+                                            <a class="social-list__link social-list__link--separation social-list__link--first" href=" ">Instagram </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__link social-list__link--separation " href=" "> Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__link social-list__link--separation " href=" ">Facebook </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__link " href=" "> LinkedIn</a>
+                                        </li>
+                                    </ul>
+
+                </div>
             </div>
         </div>
     </header>
@@ -83,7 +85,7 @@
     <main>
         <!-- hero_section -->
         <section class="hero">
-            <div class="">
+            <div class="container">
                 <h1 class="hero__title ">Эффективные решения для вашего бизнеса</h1>
                 <button data-modal-open class="button button__order" type="button">Заказать услугу</button>
             </div>
@@ -404,7 +406,7 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer-tablet">
-                <div>
+                <div class="adress-section">
                     <a class="logo footer__logo" href="./index.html"> Web<span
                             class="footer-logo__accent">Studio</span></a>
                     <address class="footer-contacts">

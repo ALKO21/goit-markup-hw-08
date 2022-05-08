@@ -8,12 +8,6 @@
   color: $colorAccent;
 }
 
-.header__logo {
-  @media screen and (min-width: $desktop) {
-    margin-right: 93px;
-  }
-}
-
 .header-logo__accent {
   color: $colorBlack;
 }
