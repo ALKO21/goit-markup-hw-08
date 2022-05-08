@@ -1360,7 +1360,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .projects__item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   .projects__item .projects-sample__title {
     -webkit-box-flex: 1;

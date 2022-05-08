@@ -101,7 +101,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    width: calc((100% - (4 * 15px)) / 2);
+    width: calc((100% - (2 * 15px)) / 2);
 
     & .projects-sample__title {
       flex-grow: 1;
