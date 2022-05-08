@@ -80,8 +80,9 @@
 /* project pictures  start*/
 
 .projects {
+  justify-content: space-between;
+
   @media screen and (min-width: $tablet) {
-    // margin: -15px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -101,11 +102,14 @@
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - (4 * 15px)) / 2);
-    // margin: 15px;
+
+    & .projects-sample__title {
+      flex-grow: 1;
+    }
   }
 
   @media screen and (min-width: $desktop) {
-    width: calc((100% - (6 * 15px)) / 3);
+    width: calc((100% - (4 * 15px)) / 3);
   }
 }
 
