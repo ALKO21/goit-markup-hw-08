@@ -27,10 +27,16 @@ body {
   color: $colorBlack;
   list-style: none;
   margin: 0;
+
+  @media screen and (max-width: 767px) {
+    &.body-hidden {
+      overflow: hidden;
+    }
+  }
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 66px;
 }
 img {
   display: block;

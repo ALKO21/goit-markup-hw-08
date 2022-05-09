@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body>
+<body class="body" body-hidden >
     <!-- header -->
     <header class="header">
         <div class="header__container container">
             <!-- navigation -->
             <a class="logo header__logo" href="./index.html"> Web<span class="header-logo__accent">Studio</span></a>
-            <button class="burger-menu" aria-expanded="true" type="button" data-menu-button>
+            <button class="burger-menu" aria-expanded="true" type="button" data-menu-button body-hidden-active>
                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                     <use class="burger-menu__icon-menu" href="./img-vect/sprite.svg#menu-burger">
                     </use>
@@ -539,6 +539,8 @@
     <!-- подключение файла JavaScript -->
     <script src="./js/modal.js"> </script>
     <script src="./js/mobile-menu.js"> </script>
+        <script src="./js/body-hidden.js"> </script>
+
 
 </body>
 

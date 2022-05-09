@@ -371,9 +371,14 @@ body {
   list-style: none;
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  body.body-hidden {
+    overflow: hidden;
+  }
+}
 
 main {
-  padding-top: 70px;
+  padding-top: 66px;
 }
 
 img {
@@ -1351,9 +1356,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   padding: 20px 24px;
   outline: 1px solid #eeeeee;
 }
