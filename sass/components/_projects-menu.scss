@@ -1,55 +1,18 @@
 .button-block {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 767px) {
     justify-content: left;
   }
   @media screen and (min-width: $tablet) {
     justify-content: center;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: $desktop) {
-  }
-}
-
-.button-block__item {
-  @media screen and (max-width: 479px) {
-    &:not(:last-child) {
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-
-    &:nth-child(5) {
-      margin-bottom: 40px;
-    }
-  }
-
-  @media screen and (min-width: $mobile) and (max-width: 767px) {
-    &:nth-child(-n + 2) {
-      margin-right: 8px;
-    }
-    &:nth-child(1) {
-      margin-bottom: 15px;
-    }
-    &:nth-child(4) {
-      margin-right: 8px;
-      margin-bottom: 40px;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-    &:nth-child(4) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media screen and (min-width: $desktop) {
-    &:nth-child(4) {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 50px;
   }
 }
 

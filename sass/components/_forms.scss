@@ -49,13 +49,21 @@
     text-align: center;
     letter-spacing: 0.03em;
     line-height: calc(30 / 20);
+
+    @media screen and (min-width: $desktop) {
+      line-height: calc(23.44 / 20);
+    }
+
   }
   .modal__list {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // margin-bottom: 20px;
   }
-  .modal__item:not(:first-child) {
-    margin-top: 10px;
-  }
+  // .modal__item:not(:first-child) {
+  //   margin-top: 10px;
+  // }
   .modal__label {
     position: relative;
     display: block;
@@ -93,7 +101,8 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  font-size: 16px;
+  font-size: 14px;
+  line-height: calc(16.14 / 14);
 
   cursor: pointer;
 
@@ -107,6 +116,12 @@
   &:focus-within + .modal__icon {
     fill: $colorAccent;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+  line-height: calc(14 / 12);
+  }
+  
 }
 .modal__svg {
   width: 12px;
@@ -137,6 +152,7 @@
   align-items: center;
 
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 .checkbox__input {
   appearance: none;
@@ -193,10 +209,11 @@
   flex-direction: column;
   align-items: center;
 
+  padding-top: 20px;
+
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     align-items: flex-end;
-    margin-top: 20px;
   }
 }
 
@@ -222,7 +239,7 @@
   }
 
   @media screen and (max-width: 1199px) {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
   }
 
   @media screen and (min-width: $tablet) {

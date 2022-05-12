@@ -1,12 +1,14 @@
-/* project pictures  start*/
+
 
 .projects {
   justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   @media screen and (min-width: $tablet) {
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: row;
   }
 
   @media screen and (min-width: $desktop) {
@@ -15,14 +17,10 @@
 }
 
 .projects__item {
-  @media screen and (max-width: 767px) {
-    &:nth-child(-n + 8) {
-      margin-bottom: 30px;
-    }
-  }
+  
 
   @media screen and (min-width: $tablet) {
-    width: calc((100% - (2 * 15px)) / 2);
+    width: calc((100% - (1 * 30px)) / 2);
 
     & .projects-sample__title {
       flex-grow: 1;
@@ -30,7 +28,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: calc((100% - (4 * 15px)) / 3);
+    width: calc((100% - (2 * 30px)) / 3);
   }
 }
 
