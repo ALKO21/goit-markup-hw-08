@@ -715,10 +715,9 @@ img {
     font-size: 34px;
     line-height: 1.1764705882;
     letter-spacing: 0.02em;
-    color: #2196f3;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) and (min-width: 768px) {
   .header-contact {
     font-size: 12px;
     line-height: 1.1666666667;
@@ -726,7 +725,7 @@ img {
     letter-spacing: 0.02em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) and (min-width: 1200px) {
   .header-contact {
     display: -webkit-box;
     font-size: 14px;
@@ -739,6 +738,11 @@ img {
 .header-contact__item {
   display: -webkit-box;
   display: -ms-flexbox;
+}
+@media screen and (max-width: 767px) {
+  .header-contact__item .header-contact__link--font-size {
+    color: #2196f3;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-contact__item:first-child {

@@ -16,8 +16,7 @@
   }
 
   @media (min-width: 768px) {
-    // padding-top: 21px;
-    // padding-bottom: 21px;
+
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -192,42 +191,42 @@
   padding: 0;
   margin-left: auto;
   
-  @media (max-width:767px) {
-    & {
-      gap: 32px;
+    @media (max-width:767px) {
+      & {
+        gap: 32px;
+      }
+    & .header-contact__item:first-child{
+      
+        font-weight: 500;
+        font-size: 24px;
+        line-height: calc(28 / 24);
+        letter-spacing: 0.02em;
+      }
+      & .header-contact__item:last-child{
+      
+        font-weight: 500;
+        font-size: 34px;
+        line-height: calc(40 / 34);
+        letter-spacing: 0.02em;
+      
     }
-  & .header-contact__item:first-child{
-    
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+
       font-weight: 500;
-      font-size: 24px;
-      line-height: calc(28 / 24);
+      letter-spacing: 0.02em; 
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: -webkit-box;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+
+      font-weight: 500;
       letter-spacing: 0.02em;
     }
-    & .header-contact__item:last-child{
-    
-      font-weight: 500;
-      font-size: 34px;
-      line-height: calc(40 / 34);
-      letter-spacing: 0.02em;
-      color: $colorAccent;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-
-    font-weight: 500;
-    letter-spacing: 0.02em; 
-  }
-
-  @media screen and (min-width: $desktop) {
-    display: -webkit-box;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-
-    font-weight: 500;
-    letter-spacing: 0.02em;
   }
 }
 
@@ -235,6 +234,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
 
+  & .header-contact__link--font-size{
+    @media screen and (max-width: 767px) {
+      color: $colorAccent;
+    }
+    }
 
   @media screen and (min-width: $tablet) {
     &:first-child {
@@ -250,12 +254,12 @@
   }
 }
 
+
+
 .header-contact__link {
   color: $colorGray;
   fill: $colorGray;
   text-decoration: none;
-
-
 
   transition: color 250ms $cubic, fill 250ms $cubic;
 
@@ -265,7 +269,6 @@
     color: $colorAccent;
   }
 
-  
     @media screen and (min-width: $tablet) {
       display: flex;
     }
