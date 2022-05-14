@@ -546,7 +546,7 @@ img {
   .menu-container {
     display: none;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
   }
   .menu-container.is-open {
@@ -556,14 +556,14 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     z-index: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -578,10 +578,27 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
   }
   .menu-container.is-open .header-nav__link {
     font-size: 40px;
     line-height: 1.15;
+  }
+  .menu-container.is-open .header-nav__link--current::after {
+    display: none;
+  }
+  .menu-container.is-open .header-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 64px;
   }
   .menu-container.is-open .header-contact {
     margin: 0;
@@ -592,9 +609,20 @@ img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    gap: 32px;
   }
-  .menu-container.is-open .header-nav__link--current::after {
-    display: none;
+  .menu-container.is-open .header-contact__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+  }
+  .menu-container.is-open .header-contact__link--font-size {
+    color: #2196f3;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: calc 1.1764705882;
+    letter-spacing: 0.02em;
   }
   .menu-container.is-open .social-list {
     display: -webkit-box;
@@ -626,21 +654,12 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 50px;
   }
 }
 
 .header-nav__item {
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .header-nav__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header-nav__item:first-child {
-    margin-left: 0;
-  }
 }
 
 .header-nav__link {
@@ -683,8 +702,12 @@ img {
   }
 }
 
-@media (max-width: 767px) {
-  .header-contacts {
+.header-contact {
+  padding: 0;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .header-contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -692,42 +715,23 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 64px;
-  }
-}
-
-.header-contact {
-  padding: 0;
-  margin-left: auto;
-}
-@media (max-width: 767px) {
-  .header-contact {
-    gap: 32px;
-  }
-  .header-contact .header-contact__item:first-child {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.1666666667;
-    letter-spacing: 0.02em;
-  }
-  .header-contact .header-contact__item:last-child {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.1764705882;
-    letter-spacing: 0.02em;
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 768px) {
-  .header-contact {
+    gap: 10px;
     font-size: 12px;
     line-height: 1.1666666667;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
 }
-@media screen and (max-width: 767px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .header-contact {
     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
     font-size: 14px;
     line-height: 1.1428571429;
     font-weight: 500;
@@ -738,16 +742,6 @@ img {
 .header-contact__item {
   display: -webkit-box;
   display: -ms-flexbox;
-}
-@media screen and (max-width: 767px) {
-  .header-contact__item .header-contact__link--font-size {
-    color: #2196f3;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header-contact__item:first-child {
-    margin-bottom: 10px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .header-contact__item:first-child {
