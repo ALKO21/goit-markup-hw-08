@@ -19,7 +19,7 @@
     width: calc((100% - 60px) / 3);
   }
   @media screen and (min-width: $desktop) {
-    width: calc((100% - (5*30px) / 6));
+    width: calc((100% - (5 * 30px) / 6));
   }
 }
 .client__link {

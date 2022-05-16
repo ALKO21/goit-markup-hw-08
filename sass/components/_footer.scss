@@ -9,8 +9,15 @@
 .footer__container {
   display: block;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     text-align: left;
   }
 
@@ -21,39 +28,45 @@
 }
 
 .footer-tablet {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
   @media screen and (min-width: $tablet) {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    gap: 60px;
     align-items: center;
-
     text-align: center;
-    margin-bottom: 60px;
   }
+
   @media screen and (min-width: $desktop) {
-    padding: 0;
+    gap: 70px;
     text-align: justify;
     align-items: baseline;
-    margin: 0;
   }
 }
 .adress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   @media screen and (min-width: $desktop) {
-    margin-right: 70px;
+    gap: 9px;
   }
 }
 
 .footer-contacts__item {
   font-size: 14px;
-
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    &:not(:last-child) {
-      margin-bottom: 9px;
-    }
-  }
 }
 
 .footer-contacts__data {
@@ -74,20 +87,14 @@
 }
 
 .wellcom-block {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   color: $colorWhite;
-
-  @media screen and (min-width: $tablet) {
-    margin: 0;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-right: 93px;
-  }
 }
-.wellcom-block__title {
-  margin-bottom: 20px;
 
+.wellcom-block__title {
   text-transform: uppercase;
   font-size: 14px;
 }

@@ -38,7 +38,7 @@ body {
 main {
   padding-top: 74px;
 
-  @media (min-width:$tablet) {
+  @media (min-width: $tablet) {
     padding-top: 80px;
   }
 }

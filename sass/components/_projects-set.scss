@@ -1,5 +1,3 @@
-
-
 .projects {
   justify-content: space-between;
   display: flex;
@@ -17,8 +15,6 @@
 }
 
 .projects__item {
-  
-
   @media screen and (min-width: $tablet) {
     width: calc((100% - (1 * 30px)) / 2);
 

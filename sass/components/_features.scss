@@ -3,31 +3,17 @@
   flex-direction: column;
   gap: 30px;
 
-  // margin-left: auto;
-  // margin-right: auto;
-
-  // @media screen and (min-width: $mobile) {
-  //   justify-content: center;
-  // }
-
   @media screen and (min-width: $tablet) {
-    // width: $tablet;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-      }
-  // @media screen and (min-width: $desktop) {
-  //   width: $desktop;
-  // }
+  }
 }
 
 .features__item {
-  
   @media screen and (min-width: $tablet) {
-
     width: calc((100% - (1 * 30px)) / 2);
-
   }
 
   @media screen and (min-width: $desktop) {
@@ -59,7 +45,6 @@
 
   @media screen and (min-width: $tablet) {
     text-align: left;
-
   }
 }
 

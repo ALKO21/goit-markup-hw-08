@@ -53,17 +53,13 @@
     @media screen and (min-width: $desktop) {
       line-height: calc(23.44 / 20);
     }
-
   }
   .modal__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    // margin-bottom: 20px;
   }
-  // .modal__item:not(:first-child) {
-  //   margin-top: 10px;
-  // }
+
   .modal__label {
     position: relative;
     display: block;
@@ -119,9 +115,8 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 12px;
-  line-height: calc(14 / 12);
+    line-height: calc(14 / 12);
   }
-  
 }
 .modal__svg {
   width: 12px;
@@ -186,9 +181,9 @@
 }
 
 .subscription {
-  @media screen and (max-width: 767px) {
-    margin-top: 60px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .subscription__title {
@@ -209,11 +204,13 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: 20px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: baseline;
   }
 }
 
@@ -239,10 +236,9 @@
   }
 
   @media screen and (max-width: 1199px) {
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
   }
-
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: 450px;
   }
   @media screen and (min-width: $desktop) {

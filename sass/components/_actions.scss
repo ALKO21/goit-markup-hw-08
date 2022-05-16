@@ -4,9 +4,8 @@
   }
 }
 
-
-.section--no-padding-top{
-padding-top: 0;
+.section--no-padding-top {
+  padding-top: 0;
 }
 
 .actions {
@@ -15,7 +14,7 @@ padding-top: 0;
 
   .actions__item {
     position: relative;
-    flex-basis: calc((100% - (30px * 2))/3);
+    flex-basis: calc((100% - (30px * 2)) / 3);
   }
 }
 
